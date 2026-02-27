@@ -4,8 +4,11 @@ import { navBarConfig, siteConfig } from "../config";
 import { LinkPresets } from "../constants/link-presets";
 import { LinkPreset, type NavBarLink } from "../types/config";
 import { url } from "../utils/url-utils";
-import LightDarkSwitch from "./LightDarkSwitch.svelte";
+// Type assertion so Astro's client:only directive is accepted (Svelte component types don't declare it)
+import _LightDarkSwitch from "./LightDarkSwitch.svelte";
 import Search from "./Search.svelte";
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const LightDarkSwitch = _LightDarkSwitch as any;
 import DisplaySettings from "./widget/DisplaySettings.svelte";
 import NavMenuPanel from "./widget/NavMenuPanel.astro";
 
