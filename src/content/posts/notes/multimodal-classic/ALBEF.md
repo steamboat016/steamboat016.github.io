@@ -2,7 +2,7 @@
 title: "ALBEF"
 published: 2025-02-26
 description: "Notes on ALBEF — align before fuse with momentum distillation."
-tags: [Multimodal, Vision, Language, Notes]
+tags: [图文模型]
 category: multimodal
 draft: false
 ---

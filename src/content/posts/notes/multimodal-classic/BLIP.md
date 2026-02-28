@@ -2,7 +2,7 @@
 title: "BLIP"
 published: 2025-02-26
 description: "Notes on BLIP — bootstrapping language-image pre-training."
-tags: [Multimodal, Vision, Language, Notes]
+tags: [图文模型]
 category: multimodal
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "ViT"
 published: 2025-02-26
 description: "Notes on Vision Transformer (ViT)."
-tags: [Vision, Transformer, Notes]
+tags: [视觉模型]
 category: multimodal
 draft: false
 ---

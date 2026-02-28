@@ -2,7 +2,7 @@
 title: "ViT 相对位置编码 (AI 回答)"
 published: 2025-02-26
 description: "相对位置编码与绝对位置编码的对比与说明。"
-tags: [Vision, Transformer, Position Encoding, Notes]
+tags: [视觉模型]
 category: multimodal
 draft: false
 ---

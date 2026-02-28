@@ -2,7 +2,7 @@
 title: "MOCO"
 published: 2025-02-26
 description: "Notes on MOCO — momentum contrast for unsupervised visual representation."
-tags: [Vision, Contrastive Learning, Notes]
+tags: [对比学习]
 category: multimodal
 draft: false
 ---

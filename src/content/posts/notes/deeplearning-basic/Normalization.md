@@ -2,7 +2,7 @@
 title: "Normalization"
 published: 2025-02-26
 description: "Batch Normalization 的原理与作用。"
-tags: [深度学习基础, Normalization, Notes]
+tags: [归一化]
 category: deeplearning
 draft: false
 ---

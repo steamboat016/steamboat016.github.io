@@ -2,7 +2,7 @@
 title: "LLaMA 3.2 Vision"
 published: 2025-02-26
 description: "Notes on LLaMA 3.2 Vision — image encoder and tile-based processing."
-tags: [Multimodal, Vision, Language, Notes]
+tags: [图文模型]
 category: multimodal
 draft: false
 ---

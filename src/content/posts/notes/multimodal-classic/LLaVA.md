@@ -2,7 +2,7 @@
 title: "LLaVA"
 published: 2025-02-26
 description: "Notes on LLaVA — large language and vision assistant."
-tags: [Multimodal, Vision, Language, Notes]
+tags: [图文模型]
 category: multimodal
 draft: false
 ---

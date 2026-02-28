@@ -2,7 +2,7 @@
 title: "Flamingo"
 published: 2025-02-26
 description: "Notes on Flamingo — few-shot visual language model."
-tags: [Multimodal, Vision, Language, Notes]
+tags: [图文模型]
 category: multimodal
 draft: false
 ---

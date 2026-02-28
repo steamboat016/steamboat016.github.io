@@ -2,7 +2,7 @@
 title: "Optimizer"
 published: 2025-02-26
 description: "指数加权平均、动量、RMSProp、Adam 与权重衰减。"
-tags: [深度学习基础, 优化器, Notes]
+tags: [优化器]
 category: deeplearning
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "BLIP-2"
 published: 2025-02-26
 description: "Notes on BLIP-2 — pre-training with frozen image encoder and LLM."
-tags: [Multimodal, Vision, Language, Notes]
+tags: [图文模型]
 category: multimodal
 draft: false
 ---

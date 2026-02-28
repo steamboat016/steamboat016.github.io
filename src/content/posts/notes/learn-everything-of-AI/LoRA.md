@@ -2,7 +2,7 @@
 title: "LoRA"
 published: 2025-02-26
 description: "LoRA（低秩自适应）：高效、轻量的大模型微调技术。"
-tags: [LoRA, 微调, 大模型, Notes]
+tags: [微调]
 category: learn-everything-of-AI
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "CLIP"
 published: 2025-02-26
 description: "Notes on CLIP — image-text contrastive learning."
-tags: [Multimodal, Vision, Notes]
+tags: [对比学习]
 category: multimodal
 draft: false
 ---
