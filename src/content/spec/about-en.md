@@ -6,6 +6,8 @@ Undergraduate (class of 2027) at the **School of Intelligence Science and Techno
 
 I am interested in **multimodal large models** and **video understanding & generation**, and currently working on **frame selection** and **vision-and-language navigation (VLN)**.
 
+I share AI study notes and similar content on this site; some notes reference the course [RethinkFun](https://space.bilibili.com/18235884).
+
 ---
 
 In my spare time I enjoy League of Legends (ARAM) and am getting started with CS2. I like exploring different fields and staying curious.
