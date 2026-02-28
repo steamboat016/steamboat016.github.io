@@ -58,10 +58,23 @@ export const profileConfig: ProfileConfig = {
 	bio: "南京大学 智能科学与技术 2023级在读本科生",
 	links: [
 		{
+			name: "知乎",
+			icon: "simple-icons:zhihu",
+			url: "https://www.zhihu.com/people/code000-86",
+		},
+		{
+			name: "Bilibili",
+			icon: "simple-icons:bilibili",
+			url: "https://space.bilibili.com/381381427",
+		},
+		{
+			name: "小红书",
+			icon: "simple-icons:xiaohongshu",
+			url: "https://www.xiaohongshu.com/user/profile/65f7cd3d000000000600ccce",
+		},
+		{
 			name: "GitHub",
-			icon: "fa6-brands:github", // Visit https://icones.js.org/ for icon codes
-			// You will need to install the corresponding icon set if it's not already included
-			// `pnpm add @iconify-json/<icon-set-name>`
+			icon: "fa6-brands:github",
 			url: "https://github.com/steamboat016",
 		},
 	],
