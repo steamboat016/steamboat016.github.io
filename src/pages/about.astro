@@ -1,25 +1,99 @@
 ---
-
 import { getEntry, render } from "astro:content";
 import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
+import { siteConfig } from "../config";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
-const aboutPost = await getEntry("spec", "about");
+const aboutEn = await getEntry("spec", "about-en");
+const aboutZh = await getEntry("spec", "about-zh");
 
-if (!aboutPost) {
-	throw new Error("About page content not found");
+if (!aboutEn || !aboutZh) {
+	throw new Error("About page content not found (about-en.md and about-zh.md required)");
 }
 
-const { Content } = await render(aboutPost);
+const { Content: ContentEn } = await render(aboutEn);
+const { Content: ContentZh } = await render(aboutZh);
+
+const defaultLang = siteConfig.lang.startsWith("zh") ? "zh" : "en";
 ---
+
 <MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
-        <div class="card-base z-10 px-9 py-6 relative w-full ">
-            <Markdown class="mt-2">
-                <Content />
-            </Markdown>
-        </div>
-    </div>
+	<div class="flex w-full flex-col gap-4">
+		<div class="flex justify-end gap-2">
+			<button
+				type="button"
+				class:list={["about-lang-btn rounded-lg px-3 py-1.5 text-sm font-medium transition", defaultLang === "en" && "bg-[var(--btn-regular-bg)] text-[var(--primary)]"]}
+				data-lang="en"
+				aria-pressed={defaultLang === "en"}
+			>
+				English
+			</button>
+			<button
+				type="button"
+				class:list={["about-lang-btn rounded-lg px-3 py-1.5 text-sm font-medium transition", defaultLang === "zh" && "bg-[var(--btn-regular-bg)] text-[var(--primary)]"]}
+				data-lang="zh"
+				aria-pressed={defaultLang === "zh"}
+			>
+				中文
+			</button>
+		</div>
+		<div class="rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+			<div class="card-base z-10 px-9 py-6 relative w-full">
+				<div id="about-content-en" class="about-content mt-2" data-lang="en" hidden={defaultLang !== "en"}>
+					<Markdown class="mt-2">
+						<ContentEn />
+					</Markdown>
+				</div>
+				<div id="about-content-zh" class="about-content mt-2" data-lang="zh" hidden={defaultLang !== "zh"}>
+					<Markdown class="mt-2">
+						<ContentZh />
+					</Markdown>
+				</div>
+			</div>
+		</div>
+	</div>
 </MainGridLayout>
+
+<script define:vars={{ defaultLang }}>
+	const storageKey = "about-lang";
+	const contentEn = document.getElementById("about-content-en");
+	const contentZh = document.getElementById("about-content-zh");
+	const buttons = document.querySelectorAll(".about-lang-btn");
+
+	function showLang(lang) {
+		if (!contentEn || !contentZh) return;
+		contentEn.hidden = lang !== "en";
+		contentZh.hidden = lang !== "zh";
+		buttons.forEach((btn) => {
+			const isActive = btn.getAttribute("data-lang") === lang;
+			btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+			btn.classList.toggle("bg-[var(--btn-regular-bg)]", isActive);
+			btn.classList.toggle("text-[var(--primary)]", isActive);
+		});
+		try {
+			localStorage.setItem(storageKey, lang);
+		} catch (_) {}
+	}
+
+	const initial = (() => {
+		try {
+			const stored = localStorage.getItem(storageKey);
+			if (stored === "en" || stored === "zh") return stored;
+		} catch (_) {}
+		return defaultLang;
+	})();
+
+	showLang(initial);
+
+	buttons.forEach((btn) => {
+		btn.addEventListener("click", () => showLang(btn.getAttribute("data-lang")));
+	});
+</script>
+
+<style>
+	.about-lang-btn:hover {
+		background: var(--btn-plain-bg-hover);
+	}
+</style>
