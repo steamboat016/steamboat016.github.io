@@ -1,16 +1,18 @@
 ---
 import { getEntry, render } from "astro:content";
 import Markdown from "@components/misc/Markdown.astro";
+import { siteConfig } from "../config";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
-import { siteConfig } from "../config";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
 const aboutEn = await getEntry("spec", "about-en");
 const aboutZh = await getEntry("spec", "about-zh");
 
 if (!aboutEn || !aboutZh) {
-	throw new Error("About page content not found (about-en.md and about-zh.md required)");
+	throw new Error(
+		"About page content not found (about-en.md and about-zh.md required)",
+	);
 }
 
 const { Content: ContentEn } = await render(aboutEn);
