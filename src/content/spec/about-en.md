@@ -4,7 +4,7 @@ Hi👋 this is steamboat016 ~
 
 Undergraduate (class of 2027) at the **School of Intelligence Science and Technology**, Nanjing University.
 
-I am interested in **multimodal large models** and **video understanding & generation**, and currently working on **frame selection** and **vision-and-language navigation (VLN)**.
+My research interests are **multimodal large language models**, **agents**, and **reinforcement learning**.
 
 I share AI study notes and similar content on this site; some notes reference the course [RethinkFun](https://space.bilibili.com/18235884).
 
